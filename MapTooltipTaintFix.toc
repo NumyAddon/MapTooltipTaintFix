@@ -1,0 +1,24 @@
+## Interface: @toc-version-retail@
+#@debug@
+## Interface: 120000
+#@end-debug@
+## Title: Map Tooltip Taint Fix
+## Author: Numy
+## IconTexture: Interface\Addons\MapTooltipTaintFix\media\icon
+## Notes: Fixes map tooltips breaking due to taint
+## Version: @project-version@
+## X-Curse-Project-ID: 1637428
+## X-Wago-ID: j6jmJ1NR
+## Category: Map
+## Category-deDE: Karte
+## Category-esES: Mapa
+## Category-esMX: Mapa
+## Category-frFR: Carte
+## Category-itIT: Mappa
+## Category-koKR: 지도
+## Category-ptBR: Mapa
+## Category-ruRU: Карта
+## Category-zhCN: 地图
+## Category-zhTW: 地圖
+
+main.lua
