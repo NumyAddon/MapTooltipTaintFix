@@ -4,7 +4,7 @@
 #@end-debug@
 ## Title: Map Tooltip Taint Fix
 ## Author: Numy
-## IconTexture: Interface\Addons\MapTooltipTaintFix\media\icon
+## IconTexture: Interface\Addons\!MapTooltipTaintFix\media\icon
 ## Notes: Fixes map tooltips breaking due to taint
 ## Version: @project-version@
 ## X-Curse-Project-ID: 1637428
