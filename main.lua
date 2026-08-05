@@ -182,3 +182,25 @@ setfenv(CallingPOI_OnEnter, tooltipEnv);
 setfenv(TaskPOI_OnEnter, tooltipEnv);
 setfenv(TaskPOI_OnLeave, tooltipEnv);
 setfenv(EventSchedulerBaseEntryMixin.OnLeave, tooltipEnv);
+
+-- add compatibility for addons that directly insert e.g. AreaPOI data into the GameTooltip
+hooksecurefunc(GameTooltip, "AddLine", function(tt, ...)
+    if customTooltip:IsShown() and not GameTooltip:GetOwner() then
+        customTooltip:AddLine(...);
+    end
+end);
+hooksecurefunc(GameTooltip, "AddDoubleLine", function(tt, ...)
+    if customTooltip:IsShown() and not GameTooltip:GetOwner() then
+        customTooltip:AddDoubleLine(...);
+    end
+end);
+hooksecurefunc(GameTooltip, "Show", function()
+    if customTooltip:IsShown() and not GameTooltip:GetOwner() then
+        customTooltip:Show();
+    end
+end);
+hooksecurefunc(GameTooltip, "Hide", function()
+    if customTooltip:IsShown() then
+        customTooltip:Hide();
+    end
+end);
