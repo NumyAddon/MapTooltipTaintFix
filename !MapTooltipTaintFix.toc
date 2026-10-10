@@ -1,6 +1,6 @@
 ## Interface: @toc-version-retail@
 #@debug@
-## Interface: 120000
+## Interface: 120000, 16001
 #@end-debug@
 ## Title: Map Tooltip Taint Fix
 ## Author: Numy
