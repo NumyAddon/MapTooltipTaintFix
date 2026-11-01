@@ -203,3 +203,8 @@ hooksecurefunc(GameTooltip, "Hide", function()
         customTooltip:Hide();
     end
 end);
+hooksecurefunc(GameTooltip, "SetOwner", function(tt, ...)
+    if customTooltip:IsShown() then
+        customTooltip:SetOwner(...)
+    end
+end);
