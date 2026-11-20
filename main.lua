@@ -161,9 +161,13 @@ local hooked = {};
 --- @param pin BaseMapPoiPinTemplate
 hooksecurefunc(WorldMapFrame, 'RegisterPin', function(_, pin)
     RunNextFrame(function()
-        if hooked[pin] then return end
-        hooked[pin] = true
+        if hooked[pin] then return; end
+        hooked[pin] = true;
+        -- hooking OnLeave enables mouse scripts, so we restore whatever was set before
+        local clickEnabled, motionEnabled = pin:IsMouseClickEnabled(), pin:IsMouseMotionEnabled();
         pin:HookScript("OnLeave", function() customTooltip:Hide(); end);
+        pin:SetMouseClickEnabled(clickEnabled);
+        pin:SetMouseMotionEnabled(motionEnabled);
     end);
 end);
 
